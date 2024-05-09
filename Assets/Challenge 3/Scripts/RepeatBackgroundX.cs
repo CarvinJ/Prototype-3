@@ -13,8 +13,7 @@ public class RepeatBackgroundX : MonoBehaviour
         repeatWidth = GetComponent<BoxCollider>().size.y / 2; // Set repeat width to half of the background
     }
 
-
-     void Update()
+    private void Update()
     {
         // If background moves left by its repeat width, move it back to start position
         if (transform.position.x < startPos.x - repeatWidth)

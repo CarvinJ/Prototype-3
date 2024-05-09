@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 534669904}
   - component: {fileID: 534669903}
   - component: {fileID: 534669906}
+  - component: {fileID: 534669907}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -396,6 +397,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &534669907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f7fab0f0588449f8a76a29f504f0eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &549592967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -496,7 +509,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63e9aff5bb16e40808c2deafc2929beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefeb: {fileID: 7002076179220621164, guid: d0ce8c1416db446349b6150dc9bd5470, type: 3}
+  obstaclePrefeb:
+  - {fileID: 7002076179220621164, guid: d0ce8c1416db446349b6150dc9bd5470, type: 3}
+  - {fileID: 6386176793338789522, guid: 1016a63224aaf49ed8eef4e01e3e499d, type: 3}
+  - {fileID: 7013432864689002416, guid: 735fdb58f2594419c9dfbec34ba19c50, type: 3}
 --- !u!198 &823877415 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
@@ -723,14 +739,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccdda42b9e2c40c8b5ccc6dda3e4a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1800
-  gravityModifier: 10
+  jumpForce: 500
+  gravityModifier: 5
   isOnGround: 1
   gameOver: 0
   explosionParticle: {fileID: 1262376080}
   dirtParticle: {fileID: 823877415}
   jumpSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   crashSound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
+  canDoubleJump: 0
+  doubleJumpForce: 2000
 --- !u!65 &1049822486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +776,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!4 &1049822489 stripped
 Transform:
@@ -1018,7 +1036,7 @@ Transform:
   m_GameObject: {fileID: 2014335011}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 50, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
